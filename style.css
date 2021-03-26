@@ -10,20 +10,22 @@ body{
 }
 #logo{
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	animation:fill 5s ease-in-out 2.5s;
+	animation: 0.5s ease-in-out;
+	/*animation:fill 8s ease forwards;*/
 }
 
+
 #logo path:nth-child(n){
-	stroke-dasharray: 121;
-	stroke-dasharray: 121;
-	animation:line-agin 3s ease forwards;
+	stroke-dasharray: 500;
+	stroke-dasharray: 1000;
+	animation:dash 3s linear forwards;
 }
-@keyframes line-agin{	
+@keyframes dash{	
 	to{
-		stroke-dasharray: 0;
+		stroke-dasharray: 0
 	}
 }
 @keyframes fill{
@@ -31,7 +33,54 @@ body{
 	from{
 		fill: transparent;
 	}
+	
 	to{
-		fill: white;
+		fill: red;
 	}
 }
+.m__div_er{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	top: 10%;
+	
+}
+.m__div_er p{
+	font-size: 50px;
+	color: white;
+	padding: 20px;
+	width: 50%;
+	/*background-image: linear-gradient(#00A5A8 0%, #4DCBCD 100%);*/
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	text-align: center;
+	border-radius: 10px;
+text-transform: uppercase;
+	/*box-shadow: 1px 0px 20px rgb(204 150 150 / 25%);*/
+}
+
+.m__div_btn{
+	position: relative;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.m__div_btn .m__btn_Home{
+	padding: 10px 20px;
+	border: none;
+	background: transparent;
+	box-shadow: 1px 0px 20px rgb(0 0 0 / 10%);
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 10px;
+	border-bottom: 2px solid red;
+}
+.m__div_btn .m__btn_Home:hover{
+	border: 1px solid red;
+}
+
